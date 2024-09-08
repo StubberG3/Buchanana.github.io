@@ -1,0 +1,127 @@
+<!doctype html>
+
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title> Angela Buchanan - Interactive</title>
+
+	<link href="css/styles.css"
+    type="text/css"
+    rel="stylesheet">
+    <link href="css/normalize.css"
+    type="text/css"
+    rel="stylesheet">
+
+    <!-- Important Owl stylesheet -->
+	<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+	<!-- Default Theme -->
+	<link rel="stylesheet" href="owl-carousel/owl.theme.css">
+
+    <!-- Fancybox lightbox stylesheet -->
+	<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen">
+	<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+
+	</head>
+
+	<body>
+		<div class="wrap">
+			<header>
+
+				<nav>
+					<ul>
+						<li><a href="index.html"><b class="arrow">></b>Home </a> </li>
+						<li><a href="portfolio.html"><b class="arrow">></b>Portfolio </a> </li>
+						<li><a href="about.html"><b class="arrow">></b>About_Me </a> </li>
+						<li><a href="resume.pdf" target="_blank"><b class="arrow">></b>Resume </a> </li>
+					</ul>
+				</nav>
+				<h1> ANGELA BUCHANAN </h1>
+				<h2 class="section"> INTERACTIVE </h2>
+
+				<div class="rainbow">
+					<div class="blue"></div>
+					<div class="green"></div>
+					<div class="yellow"></div>
+					<div class="red"></div>
+				</div>
+
+				<hr>
+			</header>
+
+			<div id="worksBG">
+				<div class="rainbow">
+					<div class="blue"></div>
+					<div class="green"></div>
+					<div class="yellow"></div>
+					<div class="red"></div>
+				</div>
+			</div>
+
+			<div id="content">
+				<h4 class="warning"> *CONTENT REQUIRES FIREFOX OR INTERNET EXPLORER TO PLAY* </h4>
+
+				<div id="owl_carousel" class="owl-carousel">
+
+					<a class="fancybox fancybox.iframe" href="in-a-space/In_A_Space.html" data-fancybox-group="gallery" title="In A Space - 2015">
+						<img class="border" src="images/spaceThumb.png" width="150" height="400" alt="In A Space - 2015">
+							<h3>IN A SPACE</h3></a>
+					<a class="fancybox fancybox.iframe" href="follow-me/Follow_me_v3.html" data-fancybox-group="gallery" title="Follow Me - 2015">
+						<img class="border" src="images/followThumb.png" width="150" height="400" alt="Follow Me - 2015">
+							<h3>FOLLOW <br> ME</h3></a>
+					<a>
+						<img class="border" src="images/EmptySlot.png" width="150" height="400" alt="empty">
+						<h3>EMPTY SLOT</h3></a>
+					<a>
+						<img class="border" src="images/EmptySlot.png" width="150" height="400" alt="empty">
+						<h3>EMPTY SLOT</h3></a>
+					<a>
+						<img class="border" src="images/EmptySlot.png" width="150" height="400" alt="empty">
+						<h3>EMPTY SLOT</h3></a>
+
+				</div>
+			</div>
+		</div>
+
+		<footer class="wrap">
+			<hr>
+			<h3> Have something to say? <b class="highlight">CONTACT ME!</b></h3>
+
+			<address>
+			<ul>
+				<li> <a><img src="images/email.png" width="113" height="100"><p>buchanana@drexel.edu</p></a></li>
+				<li> <a><img src="images/phone.png" width="107" height="100"><p>757-525-7926</p></a></li>
+				<li> <a href="https://www.facebook.com/AwesomeArtistAngie">
+						<img src="images/facebook.png" width="167" height="100"><p>facebook.com/AwesomeArtistAngie</p></a></li>
+			</ul>
+			</address>
+		</footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Include js plugin -->
+		<script src="owl-carousel/owl.carousel.js"></script>
+
+		<script>
+			$(document).ready(function() {
+
+			  $("#owl_carousel").owlCarousel({
+			  	items : 4
+			  });
+			});
+		</script>
+
+		<script type="text/javascript" src="fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("a.fancybox").fancybox({
+        			'minHeight':600,
+        			'minWidth':960,
+        			'fitToView' : false
+				});
+			});
+		</script>
+	</body>
+</html>

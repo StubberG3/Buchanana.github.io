@@ -456,6 +456,16 @@ nav li:hover {
 	position: relative;
 }
 
+	.col-1of2:first-child {
+		padding-left: 0;
+		margin-left: 0;
+	}
+
+	.col-1of2:last-child {
+		padding-right: 0;
+		margin-right: 0;
+	}
+
 .col-1of4 {
 	width: 185px;
 	padding: 0px;
@@ -749,7 +759,7 @@ o888o        `Y8bod8P' d888b      "888" o888o   `Y8bod8P' o888o o888o `Y8bod8P'
 
 .linkWrap {
 	position: absolute; 
-	bottom: -50px;
+	bottom: -20px;
 }
 
 @media screen and (max-width: 800px) {
@@ -812,44 +822,32 @@ a{
 	
 }
 
-.IMGwrap {
-	float: right;
-	overflow: visible;
-	width: 442px;
-	height:500px;
-	margin-left: 20px;
-}
+
 
 .projIMG {
-	position: relative;
-	z-index: 100;
-	left: 36px;
-	top: -420px; 
-	
-}
-
-.projIMG img{
-	width: 83%;
-	
+	float: right;
+	margin-left: 20px;
+	width: 500px;
+	height: 500px;
+	object-fit: cover;
 }
 
 
 
-.projwrap {
+ .projwrap {
+	/* min-width: 1000px; */
+	/* height: 100%; */
 	margin:0 auto;
 	padding:0;
 } 
 
-
-
-
 article {
-	/* float: right; */
-	/* width: 70%; */
 	background-color: #205D7A;
-	min-height: 500px;
+	width: 100%;
+	min-height: 540px;
 	position: relative;
-	/* padding-bottom: 60px; give links some breathing room on desktop */
+	padding: 20px;
+	padding-bottom: 60px; /* give links some breathing room on desktop */
 	/* margin: 0px; */
 	/* border-style: solid;
 	border-color: rgba(40, 133, 180, 0.5);
@@ -858,44 +856,16 @@ article {
 	box-shadow: 0px 0px 50px rgba(40, 133, 180, 0.322);
 }
 
-.projContent {
-	padding: 20px;
-}
-
-.divider {
-	border-left: 2px solid #2886B4;
-    height: 97%;
-    position: absolute;
-    left: 50%;
-	margin-left: -3px;
-	margin-right: 20px;
-	top: 10px;
-	bottom: -10px;
-}
-
-article .col {
-	padding: 20px;
-}
-
-@media screen and (max-width: 1300px) {
-	.project .col-1of2 {
-		float: none;
-		width: 100%;
-		margin-bottom: 20px;
-	}
-
-	.project .divider {
-		display: none;
-	}
-}
-
 /* tablet */
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 800px) {
 	article {
 		padding-bottom: 20px;
 	}
 }
 
+/* article.p {
+	width:40%;
+} */
 
 hr { 
 	/* margin-top: 20px; */
