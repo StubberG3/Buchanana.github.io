@@ -39,7 +39,7 @@
     <!-- Main: Spline and Contact Info-->
     <main class="spline-contact-wrap">
       <!-- Loading -->
-      <progress id="loading" class="loading">
+      <div id="loading" class="loading">
         <img
           id="PixelAngie"
           class="PixelAngie bounce"
@@ -49,7 +49,42 @@
           alt="Loading Animation"
         />
         <h1 id="loading-text">Loading...</h1>
-      </progress>
+      </div>
+      <!-- Nav -->
+      <nav>
+        <ul class="nav">
+          <li class="nav-list-item">
+            <a class="btn" href="mailto:Angela@AngelaBuchanan.me">
+              <span>Contact</span
+              ><img
+                class="nav-icon"
+                src="./images/svg/contact_icon.svg"
+                alt="Envelope"
+            /></a>
+          </li>
+          <li class="nav-list-item">
+            <a
+              class="btn"
+              href="https://www.linkedin.com/in/angelabuchananme/"
+              target="_blank"
+              ><span>LinkedIn</span
+              ><img
+                class="nav-icon"
+                src="./images/svg/linkedin_icon.svg"
+                alt="LinkedIn"
+            /></a>
+          </li>
+          <li class="nav-list-item">
+            <a class="btn" href="./resume.pdf" target="_blank"
+              ><span>Resume</span
+              ><img
+                class="nav-icon"
+                src="./images/svg/resume_icon.svg"
+                alt="Download Resume"
+            /></a>
+          </li>
+        </ul>
+      </nav>
       <!-- Spline -->
       <figure class="spline-wrap">
         <spline-viewer
@@ -118,8 +153,8 @@
         <button
           type="button"
           data-filter="portfolio"
-          class="btn active"
-          aria-pressed="true"
+          class="btn"
+          aria-pressed="false"
           aria-label="Filter by Portfolio"
         >
           <h6>Portfolio</h6>
@@ -135,106 +170,108 @@
         </button>
       </section>
       <!-- Cartridges -->
-      <section class="cartridges">
-        <div
-          class="cartridge cartridge-portfolio"
-          alt="Cartridge Image of Lightmare"
-          id="gallery-LM"
-          data-category="portfolio"
-        >
-          <div class="cartridge-label">
-            <h6>Lightmare</h6>
+      <div class="cartridges-wrap">
+        <section class="cartridges">
+          <div
+            class="cartridge cartridge-portfolio"
+            alt="Cartridge Image of Lightmare"
+            id="gallery-LM"
+            data-category="portfolio"
+          >
+            <div class="cartridge-label">
+              <h6>Lightmare</h6>
+            </div>
           </div>
-        </div>
-        <div
-          class="cartridge cartridge-portfolio"
-          alt="Cartridge Image"
-          id="gallery-3D"
-          data-category="portfolio"
-        >
-          <div class="cartridge-label"><h6>3D Works</h6></div>
-        </div>
-        <div
-          class="cartridge cartridge-portfolio"
-          alt="Cartridge Image"
-          id="gallery-VA"
-          data-category="portfolio"
-        >
-          <div class="cartridge-label"><h6>Vector Art</h6></div>
-        </div>
-        <div
-          class="cartridge cartridge-portfolio"
-          alt="Cartridge Image"
-          id="gallery-DP"
-          data-category="portfolio"
-        >
-          <div class="cartridge-label"><h6>Digital Painting</h6></div>
-        </div>
-        <div
-          class="cartridge cartridge-portfolio"
-          alt="Cartridge Image"
-          id="gallery-GD"
-          data-category="portfolio"
-        >
-          <div class="cartridge-label"><h6>Graphic Design</h6></div>
-        </div>
-        <div
-          class="cartridge cartridge-portfolio"
-          alt="Cartridge Image"
-          id="gallery-TA"
-          data-category="portfolio"
-        >
-          <div class="cartridge-label"><h6>Technical Art</h6></div>
-        </div>
-        <div
-          class="cartridge cartridge-portfolio"
-          alt="Cartridge Image"
-          id="gallery-LD"
-          data-category="portfolio"
-        >
-          <div class="cartridge-label"><h6>Life Drawing</h6></div>
-        </div>
-        <div
-          class="cartridge cartridge-project"
-          alt="Cartridge Image"
-          id="gallery-PM"
-          data-category="projects"
-        >
-          <div class="cartridge-label"><h6>Pyramid</h6></div>
-        </div>
-        <div
-          class="cartridge cartridge-project"
-          alt="Cartridge Image"
-          id="gallery-CG"
-          data-category="projects"
-        >
-          <div class="cartridge-label"><h6>Chubby Gubby</h6></div>
-        </div>
-        <div
-          class="cartridge cartridge-project"
-          alt="Cartridge Image"
-          id="gallery-HC"
-          data-category="projects"
-        >
-          <div class="cartridge-label"><h6>HEMOCRAFT</h6></div>
-        </div>
-        <div
-          class="cartridge cartridge-project"
-          alt="Cartridge Image"
-          id="gallery-LM"
-          data-category="projects"
-        >
-          <div class="cartridge-label"><h6>Lightmare</h6></div>
-        </div>
-        <div
-          class="cartridge cartridge-project"
-          alt="Cartridge Image"
-          id="gallery-AA"
-          data-category="projects"
-        >
-          <div class="cartridge-label"><h6>Alien Arcade</h6></div>
-        </div>
-      </section>
+          <div
+            class="cartridge cartridge-portfolio"
+            alt="Cartridge Image"
+            id="gallery-3D"
+            data-category="portfolio"
+          >
+            <div class="cartridge-label"><h6>3D Works</h6></div>
+          </div>
+          <div
+            class="cartridge cartridge-portfolio"
+            alt="Cartridge Image"
+            id="gallery-VA"
+            data-category="portfolio"
+          >
+            <div class="cartridge-label"><h6>Vector Art</h6></div>
+          </div>
+          <div
+            class="cartridge cartridge-portfolio"
+            alt="Cartridge Image"
+            id="gallery-DP"
+            data-category="portfolio"
+          >
+            <div class="cartridge-label"><h6>Digital Painting</h6></div>
+          </div>
+          <div
+            class="cartridge cartridge-portfolio"
+            alt="Cartridge Image"
+            id="gallery-GD"
+            data-category="portfolio"
+          >
+            <div class="cartridge-label"><h6>Graphic Design</h6></div>
+          </div>
+          <div
+            class="cartridge cartridge-portfolio"
+            alt="Cartridge Image"
+            id="gallery-TA"
+            data-category="portfolio"
+          >
+            <div class="cartridge-label"><h6>Technical Art</h6></div>
+          </div>
+          <div
+            class="cartridge cartridge-portfolio"
+            alt="Cartridge Image"
+            id="gallery-LD"
+            data-category="portfolio"
+          >
+            <div class="cartridge-label"><h6>Life Drawing</h6></div>
+          </div>
+          <div
+            class="cartridge cartridge-project"
+            alt="Cartridge Image"
+            id="gallery-PM"
+            data-category="projects"
+          >
+            <div class="cartridge-label"><h6>Pyramid</h6></div>
+          </div>
+          <div
+            class="cartridge cartridge-project"
+            alt="Cartridge Image"
+            id="gallery-CG"
+            data-category="projects"
+          >
+            <div class="cartridge-label"><h6>Chubby Gubby</h6></div>
+          </div>
+          <div
+            class="cartridge cartridge-project"
+            alt="Cartridge Image"
+            id="gallery-HC"
+            data-category="projects"
+          >
+            <div class="cartridge-label"><h6>HEMOCRAFT</h6></div>
+          </div>
+          <div
+            class="cartridge cartridge-project"
+            alt="Cartridge Image"
+            id="gallery-LM"
+            data-category="projects"
+          >
+            <div class="cartridge-label"><h6>Lightmare</h6></div>
+          </div>
+          <div
+            class="cartridge cartridge-project"
+            alt="Cartridge Image"
+            id="gallery-AA"
+            data-category="projects"
+          >
+            <div class="cartridge-label"><h6>Alien Arcade</h6></div>
+          </div>
+        </section>
+      </div>
     </aside>
     <!-- Bootstrap -->
     <script

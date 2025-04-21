@@ -4,16 +4,46 @@ $(document).ready(function () {
   // initialize light gallery
   initLightGallery();
 
+  // set desktop project filter to active by default
+  $(window).on("resize load", function () {
+    const isMobile = window.innerWidth < 993;
+    if (!isMobile) {
+      if (!$("*[data-filter]").hasClass("active")) {
+        $("[data-filter='portfolio']").click();
+      }
+      $(".showcase").removeClass("expanded minimized");
+      $(".cartridges-wrap").slideDown();
+    } else {
+      $(".cartridges-wrap").hide();
+      if ($("*[data-filter]").hasClass("active")) {
+        $("*[data-filter]").removeClass("active").attr("aria-pressed", "false");
+        $(".showcase").addClass("expanded").removeClass("minimized");
+      } else {
+        $(".showcase").addClass("minimized").removeClass("expanded");
+      }
+    }
+  });
+
   // toggle cartridges on category change
   const handleCategoryChange = (event) => {
+    const isMobile = window.innerWidth < 993;
     const $selected = $(event.target);
     if ($selected.hasClass("active")) {
+      if (isMobile) {
+        $selected.removeClass("active");
+        $(".cartridges-wrap").slideUp();
+        $(".showcase").removeClass("expanded");
+      }
       return;
     }
 
-    $("*[data-filter").removeClass("active");
-    $selected.addClass("active").attr("aria-pressed", "false");
-    $selected.attr("aria-pressed", "true");
+    if (isMobile) {
+      $(".cartridges-wrap").slideDown();
+      $(".showcase").addClass("expanded");
+    }
+
+    $("*[data-filter").removeClass("active").removeAttr("disabled");
+    $selected.addClass("active").attr("aria-pressed", "true");
 
     const activeFilter = $selected.data("filter");
     $("*[data-category]").hide();
