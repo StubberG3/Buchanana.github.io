@@ -5,12 +5,21 @@ $(document).ready(function () {
   initLightGallery();
 
   // toggle cartridges on category change
-  const handleCategoryChange = () => {
-    const checked = $(".form-check-input:checked").data("filter");
+  const handleCategoryChange = (event) => {
+    const $selected = $(event.target);
+    if ($selected.hasClass("active")) {
+      return;
+    }
+
+    $("*[data-filter").removeClass("active");
+    $selected.addClass("active").attr("aria-pressed", "false");
+    $selected.attr("aria-pressed", "true");
+
+    const activeFilter = $selected.data("filter");
     $("*[data-category]").hide();
-    $(`*[data-category=${checked}]`).show();
+    $(`*[data-category=${activeFilter}]`).show();
   };
-  $(".form-check-input").change(handleCategoryChange);
+  $("*[data-filter]").click(handleCategoryChange);
 
   // transition for when spline has completed loading
   const handleLoadComplete = () => {
@@ -42,19 +51,6 @@ $(document).ready(function () {
   };
   const $splineViewer = document.getElementById("spline-viewer");
   $splineViewer.addEventListener("load-complete", handleLoadComplete);
-
-  // highlight traits
-  const highlightTraits = (() => {
-    let i = 2;
-    setInterval(function () {
-      if (i > 5) {
-        i = 2;
-      }
-      $(".trait").removeClass("blue-text text-lighten-1 highlight");
-      $(`.trait-${i}`).addClass("blue-text text-lighten-1 highlight");
-      i++;
-    }, 5000); // every 5 seconds
-  })();
 });
 
 function initLightGallery() {
